@@ -5,8 +5,41 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.example</groupId>
-    <artifactId>WetterCLI</artifactId>
+    <artifactId>WeatherCLI</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <build>
+        <plugins>
+            <!-- Plugin zum Erstellen einer ausführbaren JAR mit allen Dependencies -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <version>3.4.1</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <!-- Maven JAR Plugin, um die Main-Class ins Manifest zu schreiben -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.2.2</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <mainClass>WeatherCLI</mainClass> <!-- Stelle sicher, dass dies die richtige Klasse ist -->
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
@@ -15,14 +48,14 @@
     </properties>
 
     <dependencies>
-        <!-- HTTP Client für API-Requests -->
+        <!-- HTTP-Client für API-Requests -->
         <dependency>
             <groupId>com.squareup.okhttp3</groupId>
             <artifactId>okhttp</artifactId>
             <version>4.11.0</version>
         </dependency>
 
-        <!-- JSON Parser für die API-Antwort -->
+        <!-- JSON-Parser für die API-Antwort -->
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
