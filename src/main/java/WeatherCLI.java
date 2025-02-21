@@ -45,7 +45,7 @@ public class WeatherCLI {
         double temp = rootNode.get("main").get("temp").asDouble();
         String weather = rootNode.get("weather").get(0).get("description").asText();
 
-        System.out.println("🌤 Wetter in " + town + ":");
+        System.out.println("\n🌤 Wetter in " + town + ":");
         System.out.println("------------------------");
         System.out.println("🌡 Temperatur: " + temp + "°C");
         System.out.println("☁ Wetter: " + weather);
