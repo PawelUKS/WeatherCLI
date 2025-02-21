@@ -2,6 +2,13 @@
 
 **WeatherCLI** ist eine kleine Java-Anwendung, die aktuelle Wetterdaten für eine Stadt von der **OpenWeatherMap API** abruft und in der Konsole anzeigt.
 
+## **Beispiel-Screenshot**
+
+Hier ist ein Screenshot der Konsolen-Ausgabe:
+
+![Konsolen-Ausgabe](WeatherCLI_Vers_1.0.png)
+
+
 ##  **Funktionen**
 
 - Ruft aktuelle Wetterdaten über die **OpenWeatherMap API** ab  
@@ -45,11 +52,7 @@ Wandelt die JSON-Antwort in ein JsonNode-Objekt um
 - Liest die Wetterinformationen aus
 Gibt die Temperatur und Wetterbeschreibung in der Konsole aus
 
-## **Beispiel-Screenshot**
 
-Hier ist ein Screenshot der Konsolen-Ausgabe:
-
-![Konsolen-Ausgabe](WeatherCLI_Vers_1.0.png)
 
 
 ## **API & Quellen**
