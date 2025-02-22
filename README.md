@@ -31,7 +31,7 @@ Hier ist ein Screenshot der Konsolen-Ausgabe:
 
 ### **Projekt klonen:**
 ```bash
-git clone https://github.com/dein-benutzername/WeatherCLI.git
+git clone https://github.com/PawelUKS/WeatherCLI.git
 cd WeatherCLI
 ```
 ### **Java-Programm ausführen:**
@@ -39,7 +39,7 @@ cd WeatherCLI
 Das Programm wird mit einer Stadt als Argument gestartet.
 
 ```bash
-java -cp target/WetterCLI-1.0-SNAPSHOT.jar WeatherCLI Schauenburg
+java -cp target/WeatherCLI-1.0-SNAPSHOT.jar WeatherCLI Schauenburg
 ```
 ## **Code-Übersicht**
 **getWeatherData(String town)**
