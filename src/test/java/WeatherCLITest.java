@@ -44,7 +44,7 @@ public class WeatherCLITest {
         });
         assertTrue(exception.getMessage().contains("Ungültiges Uhrzeitformat"));
     }
-   
+
     @Test
     void testForecastReturnsClosestTimeMessage() {
         ByteArrayOutputStream out = new ByteArrayOutputStream();
