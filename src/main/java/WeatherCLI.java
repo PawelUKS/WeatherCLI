@@ -75,7 +75,7 @@ public class WeatherCLI {
                         System.out.println(forecastData.toPrettyString());
                     } else {
                         String dateTime = forecastData.get("dt_txt").asText();
-                        showFormattedWeather(forecastData, dateTime);
+                        showFormattedWeather(forecastData, dateTime, city);
                     }
                 } else {
                     System.out.println("Kein Wettereintrag für diesen Zeitpunkt gefunden.");
@@ -87,7 +87,7 @@ public class WeatherCLI {
                     System.out.println(weatherData.toPrettyString());
                 } else {
                     String dateTime = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
-                    showFormattedWeather(weatherData, dateTime);
+                    showFormattedWeather(weatherData, dateTime, city);
                 }
             }
         } catch (Exception e) {
@@ -185,8 +185,8 @@ public class WeatherCLI {
         throw new IllegalArgumentException("Ungültiges Uhrzeitformat! Bitte nutze HH:mm (z. B. 00:00 oder 23:45).");
     }
 
-    public static void showFormattedWeather(JsonNode node, String dateTime) {
-        String town = node.has("name") ? node.get("name").asText() : "Unbekannt";
+    public static void showFormattedWeather(JsonNode node, String dateTime, String cityName) {
+        String town = (cityName != null && !cityName.isEmpty()) ? cityName : "Unbekannt";
         double temp = node.get("main").get("temp").asDouble();
         double feelsLike = node.get("main").get("feels_like").asDouble();
         int humidity = node.get("main").get("humidity").asInt();
