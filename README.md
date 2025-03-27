@@ -17,12 +17,14 @@
 
 ### Nur Stadt angegeben
 Zeigt das aktuelle Wetter für die Stadt an.
+
 ![Nur Stadt](assets/only_city.png)
 
 ---
 
 ### Stadt + Datum + Uhrzeit
 Zeigt die Wettervorhersage zur gewünschten Uhrzeit.
+
 ![Stadt + Datum + Uhrzeit](assets/city_date_time.png)
 
 ---
@@ -30,7 +32,6 @@ Zeigt die Wettervorhersage zur gewünschten Uhrzeit.
 ### Stadt + Uhrzeit in der Vergangenheit
 Das Programm erkennt, dass die Uhrzeit bereits vergangen ist, und verschiebt automatisch auf den nächsten Tag.
 ![Nur Uhrzeit](assets/city_time.png)
-
 
 ---
 
