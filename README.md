@@ -59,7 +59,7 @@ Wird keine Stadt übergeben, erscheint ein Hilfetext.
 
 - Java 17+
 - Maven
-- OpenWeatherMap API-Key
+- OpenWeatherMap API-Key *(im Code bereits vorkonfiguriert)*
 - (Optional) Docker
 
 ---
