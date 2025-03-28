@@ -1,5 +1,8 @@
 # WeatherCLI – Konsolen-Wettertool mit Forecast, JSON & Docker
 
+## ✅ Build Status
+![Build](https://github.com/PawelUKS/WeatherCLI/actions/workflows/ci.yml/badge.svg)
+
 **WeatherCLI** ist eine moderne Java-CLI-Anwendung, die Wetterdaten von der **OpenWeatherMap API** abruft – inklusive **aktueller Wetterlage**, **Vorhersage** (mit Datum/Uhrzeit), **Fehlertoleranz**, **JSON-Ausgabe**, und **Docker-Support**.
 
 ##  Features
